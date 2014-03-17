@@ -42,6 +42,7 @@ test('timing test', function (t) {
 In Node, it will output:
 
 ```
+$ node test.js
 Passed 1 test.
 ```
 
