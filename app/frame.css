@@ -1,0 +1,35 @@
+html, body, .prova {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+}
+
+.prova {
+  display:-ms-flexbox;
+  -ms-flex-pack:center;
+  -ms-flex-align:center;
+
+  display:-moz-box;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+  display:box;
+  box-pack:center;
+  box-align:center;
+
+  font: normal 12px "pt mono";
+  color: #333;
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Mono'), local('PTMono-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptmono/v2/RTA0Dhj_HESY0h-ax44VkwLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}

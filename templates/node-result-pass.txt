@@ -1,0 +1,2 @@
+{reset}
+    {0} passed assertions.

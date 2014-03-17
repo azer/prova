@@ -1,0 +1,338 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Mono'), local('PTMono-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptmono/v2/RTA0Dhj_HESY0h-ax44VkwLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(http://themes.googleusercontent.com/static/fonts/vollkorn/v4/BCFBp4rt5gxxFrX6F12DKnYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(http://themes.googleusercontent.com/static/fonts/abrilfatface/v6/X1g_KwGeBV3ajZIXQ9VnDokaQb-UsZVONjobs91YQtw.woff) format('woff');
+}
+
+html, body {
+  width:100%; height:100%;
+  margin:0; padding:0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.waiting {
+  font: 800 36px/88px "open sans";
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  background: rgb(156, 229, 230);
+  color: #fff;
+  text-shadow:2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.waiting h1 {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.waiting .list {
+  font: normal 12px "pt mono";
+  color: #8b98ac;
+  text-shadow: none;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.waiting .status {
+  margin: 0;
+}
+
+.results {
+  width: 100%;
+}
+
+.top {
+  min-height: 100%;
+  background: rgb(252, 250, 242);
+  padding-bottom: 50px;
+}
+
+.top.failed {
+  background: rgb(239, 71, 35);
+}
+
+.top.passed {
+  background: #219d4c;
+  height: 100%;
+}
+
+.top .pass {
+  color: #fff;
+  height: 100%;
+  font: 800 21px/40px "open sans";
+  text-align: center;
+  text-shadow:2px 2px rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.errors {
+  list-style: none;
+  padding: 30px 30px;
+}
+
+.errors li {
+  background: rgb(209, 71, 35);
+  margin: 10px 0;
+}
+
+.errors li .code {
+  padding: 5px;
+  background: #333;
+  margin: 0;
+}
+
+.errors h3 {
+  color: #fff;
+  font: 400 24px "vollkorn";
+  font-weight: normal;
+  letter-spacing: 1px;
+  background: rgb(239, 71, 35);
+  padding: 10px 0;
+}
+
+.errors h4 {
+  font: 16px/16px "open sans";
+
+  background: rgb(170, 66, 34);
+  color: rgb(255, 225, 0);
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.errors .stack {
+  padding: 10px 10px;
+
+  padding: 5px 20px;
+  font: 13px/21px "open sans";
+  overflow: hidden;
+}
+
+.errors .code .line {
+  overflow: hidden;
+  white-space: pre;
+  margin: 0;
+  font: 13px/21px "open sans";
+  color: #888;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.errors .code .failing-line {
+  color: #fff;
+}
+
+.errors .code .line span {
+  padding-right: 3px;
+}
+
+.errors .stack-title {
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+}
+
+.errors .stack-line {
+  padding: 1px 20px;
+  color: rgb(34, 34, 34);
+}
+
+.results ul, .results h3 {
+  margin: 0;
+}
+
+.frame-button {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 25px;
+  height: 100%;
+  float: right;
+  color: rgba(0, 0, 0, 0.5);
+  font: bold 24px Arial, sans-serif;
+  padding-right: 5px;
+}
+
+.frame-button:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.frame-button .close {
+  display: none;
+}
+
+.results.open .frame-button .open {
+  display: none;
+}
+
+.results.open .frame-button .close {
+  display: inline;
+}
+
+.results.open {
+  float: left;
+  width: 50%;
+}
+
+.running {
+  background: #feffeb;
+  color: #b38db4;
+}
+
+.frame {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.frame.open {
+  display: block;
+  position: absolute;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  margin-top: -50px;
+  text-align: center;
+  padding: 0 0 10px;
+}
+
+.navigation .buttons {
+  width: 500px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px 0 18px 0;
+  font: 12px Arial, sans-serif;
+}
+
+.navigation .buttons a {
+  font: normal 12px "pt mono";
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.navigation .buttons a:hover {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.overview {
+  background: rgb(42, 44, 57);
+}
+
+.overview ul {
+  width: 500px;
+  padding: 50px 30px 0 30px;
+  color: #fff;
+  list-style: none;
+  margin: 0 auto;
+  font: 14px Helvetica, Arial, sans-serif;
+}
+
+.overview li {
+  padding: 10px 10px 10px;
+  background: rgba(30, 30, 30, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+.overview li.error {
+  color: rgba(255, 50, 0, 0.7);
+}
+
+.overview li span {
+  padding-right: 5px;
+}
+
+.grep {
+  background: rgb(42, 44, 57);
+  padding: 20px 0 100px 0;
+}
+
+.grep input {
+  padding: 5px 10px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  background: #fff;
+  font: 12px Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.grep .form {
+  background: #fff;
+  width: 490px;
+  margin: 20px auto;
+  font: 12px Helvetica, Arial, sans-serif;
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.grep label {
+  width: 55px;
+  padding: 5px;
+  color: #666;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.grep * {
+  display: table-cell;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.center {
+  display:-ms-flexbox;
+  -ms-flex-pack:center;
+  -ms-flex-align:center;
+
+  display:-moz-box;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+  display:box;
+  box-pack:center;
+  box-align:center;
+}
+
+.clear {
+  clear: both;
+}

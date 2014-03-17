@@ -1,0 +1,51 @@
+{
+  "name": "prova",
+  "version": "1.0.0",
+  "description": "Test runner based on Tape and Browserify",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "new-command": "0.0.3",
+    "tape": "2.x",
+    "through": "~2.3.4",
+    "is-node": "0.0.0",
+    "failing-code": "0.0.x",
+    "format-text": "0.0.3",
+    "style-format": "0.0.0",
+    "filter-stack": "0.0.0",
+    "left-pad": "0.0.0",
+    "browserify": "~3.32.1",
+    "local-debug": "0.0.0",
+    "route-map": "0.0.0",
+    "default-debug": "0.0.0",
+    "resumer": "0.0.0",
+    "stream-format": "0.0.3",
+    "dom-children": "0.0.2",
+    "glob": "^3.2.9",
+    "on-off": "0.0.2",
+    "select-dom": "0.0.0",
+    "style-dom": "0.0.0",
+    "dom-classes": "0.0.0",
+    "prettify-error": "0.0.x",
+    "bind-key": "0.0.0",
+    "faye-websocket": "^0.7.2",
+    "pubsub": "^1.0.2",
+    "watchify": "^0.6.2",
+    "concat-stream": "^1.4.4",
+    "escape-html": "^1.0.1"
+  },
+  "keywords": [
+    "testing",
+    "test",
+    "tap",
+    "tape"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/prova.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD"
+}
