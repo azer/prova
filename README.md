@@ -6,9 +6,9 @@ Features and screenshots:
 
 * Compatible with Tape.
 * Comes with a builtin web app to run tests on browser.
-* Outputs less when tests pass (![Node](https://i.cloudup.com/ausJApnH1v.png), ![Browser](https://i.cloudup.com/OKebjyRMfU.png))
-* Outputs more when tests fail (![Node](https://i.cloudup.com/R8KQ8Qwspz.png), ![Browser](https://i.cloudup.com/nA08e0s60b.png))
-* Browser app runs tests inside of an iframe ![](https://i.cloudup.com/5n8H9AqMrf.png)
+* Outputs less when tests pass ([Node](https://i.cloudup.com/ausJApnH1v.png), [Browser](https://i.cloudup.com/OKebjyRMfU.png))
+* Outputs more when tests fail ([Node](https://i.cloudup.com/R8KQ8Qwspz.png), [Browser](https://i.cloudup.com/nA08e0s60b.png))
+* Browser app runs tests inside of an iframe [Screenshot](https://i.cloudup.com/5n8H9AqMrf.png)
 * Uses [watchify](https://github.com/substack/watchify) to observe file changes and restart browser tests.
 * Lets filtering test cases (e.g node test.js -g foobar)
 
