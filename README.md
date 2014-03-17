@@ -52,7 +52,14 @@ Or, in case it fails:
 
 ### In Browser
 
-To run the tests in a web browser, just pass `-b` parameter. Then visit `localhost:7559` in your web browser:
+To run the tests in a web browser, just pass `-b` parameter:
+
+```bash
+$ node test.js -b
+Visit localhost:7559 with a browser to start running the tests.
+```
+
+Then visit `localhost:7559` in your web browser:
 
 ![](https://i.cloudup.com/OKebjyRMfU.png)
 
