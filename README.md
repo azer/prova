@@ -9,7 +9,7 @@ Features and screenshots:
 * Outputs less when tests pass ([Node](https://i.cloudup.com/ausJApnH1v.png), [Browser](https://i.cloudup.com/OKebjyRMfU.png))
 * Outputs more when tests fail ([Node](https://i.cloudup.com/R8KQ8Qwspz.png), [Browser](https://i.cloudup.com/nA08e0s60b.png))
 * Browser app runs tests inside of an iframe [Screenshot](https://i.cloudup.com/5n8H9AqMrf.png)
-* Uses [watchify](https://github.com/substack/watchify) to observe file changes and restart browser tests.
+* Uses [watchify](https://github.com/substack/watchify) to observe file changes and restart browser tests. [GIF Screenshot](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif)
 * Lets filtering test cases (e.g node test.js -g foobar)
 
 ## Install
