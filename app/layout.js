@@ -9,6 +9,7 @@ var escape = require("escape-html");
 var socket = require("./socket");
 var grep = require("./grep");
 var templates = require("./templates");
+var options = require("./options");
 
 on(window, 'resize', updatePositions);
 on(window, 'hashchange', run);
@@ -103,7 +104,7 @@ function run () {
   addError.last = undefined;
   status('running');
   dom.add(document.body, templates['frame'], {
-    options: document.location.hash.slice(1)
+    options: options.stringify()
   });
 }
 

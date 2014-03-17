@@ -92,7 +92,7 @@ html, body {
 
 .errors {
   list-style: none;
-  padding: 30px 30px;
+  padding:10px 30px;
 }
 
 .errors li {
