@@ -7,12 +7,3 @@ test('assert object', function (assert) {
   assert.notOk(false);
   assert.deepEqual([3, 1, 4], [3, 1, 4]);
 });
-
-test('test some other things', function (assert) {
-  assert.end()  
-})
-
-
-test('lorem ipsum', function (assert) {
-  assert.end()  
-})
