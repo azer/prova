@@ -6,7 +6,7 @@ Screencasts: [node.gif](https://dl.dropboxusercontent.com/s/8yyepixc0bbtby3/prov
 
 Features and screenshots:
 
-* Compatible with Tape.
+* Based on Tape, and compatible with Tape.
 * Comes with a builtin web app to run tests on browser.
 * Outputs less when tests pass ([Node](https://i.cloudup.com/ausJApnH1v.png), [Browser](https://i.cloudup.com/OKebjyRMfU.png))
 * Outputs more when tests fail ([Node](https://i.cloudup.com/R8KQ8Qwspz.png), [Browser](https://i.cloudup.com/nA08e0s60b.png))
