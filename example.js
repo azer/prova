@@ -12,8 +12,7 @@ test('a test with failing assertions', function (assert) {
   assert.equal({ a: 1 }, { a: 1 });
 });
 
-test('another test failing', function (assert) {
-  assert.plan(2);
+test('a test fails because of invalid planning', function (assert) {
+  assert.plan(3);
   assert.ok(false);
-  assert.notOk(true);
 });
