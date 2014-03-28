@@ -1,3 +1,4 @@
 
     {bold}{title}{reset}
 {error}
+{diff}

@@ -6,10 +6,9 @@ test('just passing', function (assert) {
 });
 
 test('a test with failing assertions', function (assert) {
-  assert.plan(3);
+  assert.plan(2);
   assert.equal(true, false);
-  assert.equal(2, 3);
-  assert.equal({ a: 1 }, { a: 1 });
+  assert.equal({ a: 1, b: 3 }, { a: 1 });
 });
 
 test('a test fails because of invalid planning', function (assert) {

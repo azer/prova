@@ -34,6 +34,7 @@ function addError (error) {
 
   classes.add(select('.top'), 'failed');
   error.stack = format(templates.stack, error.stack.replace(/\n\s+/g, templates['stack-line']));
+
   error.code = format(templates.code, {
     'first-line-num': error.source[0].line,
     'first-line-source': escape(error.source[0].code),
@@ -42,6 +43,10 @@ function addError (error) {
     'third-line-num': error.source[2].line,
     'third-line-source': escape(error.source[2].code)
   });
+
+  if (error.expected != undefined) {
+    error.diff = format(templates.diff, JSON.stringify(error.expected), JSON.stringify(error.actual));
+  }
 
   if (addError.last != error.test) {
     error.title = '<h3>' + error.test +'</h3>';

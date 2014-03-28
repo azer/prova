@@ -124,6 +124,24 @@ html, body {
   margin: 0;
 }
 
+.errors .diff {
+  font: 12px/12px "open sans";
+
+  background: rgb(45, 45, 45);
+  color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.errors .diff .actual {
+  padding-top: 5px;
+}
+
+.errors .diff strong {
+  padding-right: 5px;
+  color: #ccc;
+}
+
 .errors .stack {
   padding: 10px 10px;
 
