@@ -15,9 +15,19 @@ if (command.browser) {
 }
 
 module.exports = prova;
+module.exports.skip = skip;
+module.exports.only = only;
 
 function prova (title, fn) {
   if (command.browser) return;
-  if (command.grep && title.indexOf(command.grep) == -1) return;
+  if (command.grep && title.indexOf(command.grep) == -1) return skip(title, fn);
   return tape(title, fn);
+}
+
+function skip (title, fn) {
+  return tape.skip(title, fn);
+}
+
+function only (title, fn) {
+  return tape.only(title, fn);
 }
