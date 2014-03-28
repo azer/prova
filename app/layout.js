@@ -45,7 +45,7 @@ function addError (error) {
   });
 
   if (error.expected != undefined) {
-    error.diff = format(templates.diff, JSON.stringify(error.expected), JSON.stringify(error.actual));
+    error.diff = format(templates.diff, JSON.stringify(error.expected, null, " "), JSON.stringify(error.actual, null, " "));
   }
 
   if (addError.last != error.test) {
