@@ -120,7 +120,8 @@ function end () {
 function pass (assertions) {
   setup();
   classes.add(select('.top'), 'passed');
-  select('.top').innerHTML = format(templates.pass, assertions);
+  select('.pass').innerHTML = format(templates.pass, assertions);
+  classes.add(select('.results'), 'passed');
 }
 
 function toggleFrame () {

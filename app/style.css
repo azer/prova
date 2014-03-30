@@ -66,6 +66,10 @@ html, body {
   width: 100%;
 }
 
+.results.passed {
+  height: 100%;
+}
+
 .top {
   min-height: 100%;
   background: rgb(252, 250, 242);
