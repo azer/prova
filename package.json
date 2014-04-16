@@ -34,7 +34,8 @@
     "pubsub": "^1.0.2",
     "watchify": "^0.6.2",
     "concat-stream": "^1.4.4",
-    "escape-html": "^1.0.1"
+    "escape-html": "^1.0.1",
+    "mime": "^1.2.11"
   },
   "keywords": [
     "testing",

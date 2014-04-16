@@ -7,7 +7,7 @@ module.exports = pubsub;
 module.exports.isOpen = isOpen;
 
 function connect () {
-  var ws = new WebSocket(document.location.origin.replace('http', 'ws'));
+  var ws = window.ws = new WebSocket(document.location.origin.replace('http', 'ws'));
   ws.onopen = open;
   ws.onmessage = message;
   ws.onclose = close;

@@ -86,10 +86,21 @@ function setup () {
 
   on(select('.frame-button'), 'click', toggleFrame);
   on(select('.run-again'), 'click', run);
+  on(select('.maximize'), 'click', maximize);
+  on(select('.minimize'), 'click', minimize);
 
   updateConn();
 
   setupGrep();
+
+  if (localStorage['frame-open']) {
+    toggleFrame();
+  }
+
+  if (localStorage['frame-maximized']) {
+    maximize();
+  }
+
   updateFramePosition();
 }
 
@@ -125,13 +136,35 @@ function pass (assertions) {
 }
 
 function toggleFrame () {
+  var isOpen = classes.has(select('.results'), 'open');
+
+  if (isOpen) {
+    closeFrame();
+  } else {
+    openFrame();
+  }
+
+  updateFramePosition();
+}
+
+function openFrame () {
   var results = select('.results');
   var frame = select('.frame');
 
-  classes.toggle(results, 'open');
-  classes.toggle(frame, 'open');
+  classes.add(results, 'open');
+  classes.add(frame, 'open');
 
-  updateFramePosition();
+  localStorage['frame-open'] = true;
+}
+
+function closeFrame () {
+  var results = select('.results');
+  var frame = select('.frame');
+
+  classes.remove(results, 'open');
+  classes.remove(frame, 'open');
+
+  delete localStorage['frame-open'];
 }
 
 function updatePositions () {
@@ -144,7 +177,7 @@ function updateFramePosition () {
 
   if (!frame) return;
 
-  var isOpen = classes.has(frame, 'open');
+  var isOpen = classes.has(frame, 'open') && !classes.has(select('body'), 'maximized');
   var right = isOpen ? results.offsetWidth : 0;
 
   style(select('.frame-button'), 'right', right + 'px');
@@ -187,4 +220,16 @@ function updateConn (msg) {
   if (!el) return;
 
   el.innerHTML = socket.isOpen() ? 'Watching File Changes' : 'Disconnected';
+}
+
+function maximize () {
+  classes.add(select('body'), 'maximized');
+  localStorage['frame-maximized'] = true;
+  updateFramePosition();
+}
+
+function minimize () {
+  delete localStorage['frame-maximized'];
+  classes.remove(select('body'), 'maximized');
+  updateFramePosition();
 }

@@ -219,6 +219,30 @@ html, body {
   width: 50%;
 }
 
+.maximized .frame {
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.maximized .frame-button {
+  display: none;
+}
+
+.maximized .results {
+  width: 100%;
+  float: none;
+}
+
+a.minimize, .maximized a.maximize {
+  display: none;
+}
+
+.maximized a.minimize {
+  display: inline;
+}
+
 .running {
   background: #feffeb;
   color: #b38db4;
@@ -227,6 +251,7 @@ html, body {
 .frame {
   display: none;
   background: rgba(255, 255, 255, 0.2);
+  border: 0;
 }
 
 .frame.open {
