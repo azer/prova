@@ -41,7 +41,8 @@
     "mime": "^1.2.11",
     "run-serially": "0.0.0",
     "flat-glob": "0.0.1",
-    "user-agent-parser": "^0.6.0"
+    "user-agent-parser": "^0.6.0",
+    "browser-launcher": "^0.3.4"
   },
   "keywords": [
     "testing",

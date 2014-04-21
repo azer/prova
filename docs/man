@@ -4,8 +4,56 @@
 
     OPTIONS
 
-        -b     --browser    Publishes the tests on localhost:7559
         -g     --grep       Run tests matching with given pattern
+
+        -b     --browser    Publishes the tests on 0.0.0.0:7559
+        -o     --port       Publish the tests on given port number.
+        -d     --hostname   Publih the tests on given hostname.
+        -l     --launch     List available browsers to launch or launch specified browser.
+        -h     --headless   Launch the browser headlessly.
+        -r     --proxy      Launch the browser with specified proxy configuration.
 
         -v     --version    Show version and exit
         -h     --help       Show help and exit
+
+    EXAMPLES
+
+        1. Run the tests on NodeJS.
+
+           $ node test.js
+           $ node test
+           $ prova test/index.js
+           $ prova
+
+           All the above example commands will work same way. Prova assumes the filename of your test is either `test.js` or `test/index.js`
+
+       2. Publish the tests on localhost:7559, so you can run the tests on a web browser.
+
+          $ node test.js -b
+          $ prova test -b
+          $ prova -b
+
+       3. Publish the tests on given host and port.
+
+          $ node test.js -o 8080 -d foobar.net
+          $ prova test.js -p 8080 -d foobar.net
+
+       4. Publish the tests and launch a browser to automatically run the tests.
+
+          $ node test.js -b -l chrome
+          $ prova test.js -b -l chrome
+
+       5. List the browsers that can be launched automatically.
+
+          $ prova -l
+          $ node test.js -l
+
+       6. Run the tests with PhantomJS.
+
+          $ node test.js -b -l phantom
+          $ prova test.js -b -l phantom
+
+       7. Run only specified tests with PhantomJS.
+
+          $ node test.js -b -l phantom -g pattern
+          $ prova test.js -b -l phantom -g pattern

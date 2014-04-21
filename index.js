@@ -6,8 +6,20 @@ var command = require('./lib/command');
 var isProvaFrame = !isNode && document && document.getElementById && document.getElementById('prova-frame');
 var nodeRequire;
 
+
+empty.skip = empty;
+empty.only = empty;
+
+if (command.launch === true) {
+  nodeRequire = require;
+  nodeRequire('./lib/cli').launch();
+  module.exports = empty;
+  return;
+}
+
 if (command.browser) {
   nodeRequire = require;
+  nodeRequire('./lib/cli').launch();
   nodeRequire('./lib/browser')([require.main.filename], command);
   delete nodeRequire;
 } else if (isNode || isProvaFrame) {
@@ -31,3 +43,5 @@ function skip (title, fn) {
 function only (title, fn) {
   return tape.only(title, fn);
 }
+
+function empty () {}
