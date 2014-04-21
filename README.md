@@ -13,6 +13,7 @@ Features and screenshots:
 * Browser app runs tests inside of an iframe [Screenshot](https://i.cloudup.com/5n8H9AqMrf.png)
 * Uses [watchify](https://github.com/substack/watchify) to observe file changes and restart browser tests. [GIF Screenshot](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif)
 * Lets filtering test cases (e.g node test.js -g foobar)
+* Comes with [browser-launcher](https://github.com/substack/browser-launcher) for [launching browsers automatically and headless testing](#launching-browsers-and-headless-testing).
 
 ## Install
 
@@ -95,6 +96,39 @@ $ prova test/foo.js test/bar.js
 
 ```bash
 $ prova test/**/*.js -b
+```
+
+## Launching Browsers and Headless Testing
+
+List the detected browsers;
+
+```bash
+$ prova -l
+Available Browsers: safari v7.0.2, chrome v34.0.1847.116, phantom v1.9.7
+```
+
+And launch after publishing the tests:
+
+```bash
+$ prova -b -l safari
+```
+
+If your system has Xvfb, you can pass `-e` parameter to open the browser headlessly:
+
+```bash
+$ prova -b -l chrome -e
+```
+
+Or you can just run the tests on PhantomJS:
+
+```bash
+$ prova -b -l phantom
+```
+
+If you get `no matches for` errors and you think that your system has that browser, try removing [browser-launcher](https://github.com/substack/browser-launcher)'s config:
+
+```bash
+$ rm /Users/azer/.config/browser-launcher/config.json
 ```
 
 ## Command-line
