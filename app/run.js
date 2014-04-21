@@ -24,6 +24,7 @@ function receiveMessage (message) {
 }
 
 function fail (error) {
+  socket.send({ fail: error, userAgent: navigator.userAgent });
   layout.addError(error);
 }
 

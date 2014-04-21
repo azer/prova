@@ -1,0 +1,5 @@
+
+    {bold}{title}{reset}
+    {grey}{browser}{reset}
+    {error}
+{diff}
