@@ -40,7 +40,8 @@
     "escape-html": "^1.0.1",
     "mime": "^1.2.11",
     "run-serially": "0.0.0",
-    "flat-glob": "0.0.1"
+    "flat-glob": "0.0.1",
+    "user-agent-parser": "^0.6.0"
   },
   "keywords": [
     "testing",

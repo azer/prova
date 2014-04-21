@@ -1,0 +1,2 @@
+{reset}
+  {green}{passed} passed assertions.

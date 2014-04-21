@@ -1,5 +1,6 @@
 var select = require("select-dom");
 var layout = require("./layout");
+var socket = require("./socket");
 
 module.exports = start;
 
@@ -27,6 +28,8 @@ function fail (error) {
 }
 
 function end (result) {
+  socket.send({ userAgent: navigator.userAgent, result: result });
+
   if (!result.failed) layout.pass(result.passed);
   layout.list(result.tests);
 }

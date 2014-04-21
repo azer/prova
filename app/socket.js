@@ -1,13 +1,15 @@
 var pubsub = require("pubsub")();
 var status = false;
+var ws;
 
 connect();
 
 module.exports = pubsub;
 module.exports.isOpen = isOpen;
+module.exports.send = send;
 
 function connect () {
-  var ws = window.ws = new WebSocket(document.location.origin.replace('http', 'ws'));
+  ws = window.ws = new WebSocket(document.location.origin.replace('http', 'ws'));
   ws.onopen = open;
   ws.onmessage = message;
   ws.onclose = close;
@@ -40,3 +42,7 @@ function reconnect () {
   connect();
   setTimeout(reconnect, 1000);
 }
+
+function send (message) {
+  ws.send(JSON.stringify(message));
+};

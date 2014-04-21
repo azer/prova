@@ -1,0 +1,2 @@
+{reset}
+  {red}{failed} failed and {passed} passed assertions.

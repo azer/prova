@@ -1,0 +1,1 @@
+  {reset}{bold}Browser:{reset} {browser} v{browserVersion} {bold}Engine:{reset} {engine} v{engineVersion} {bold}OS:{reset} {os} v{osVersion}
