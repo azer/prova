@@ -1,0 +1,11 @@
+    USAGE
+
+        prova [filenames] [options]
+
+    OPTIONS
+
+        -b     --browser    Publishes the tests on localhost:7559
+        -g     --grep       Run tests matching with given pattern
+
+        -v     --version    Show version and exit
+        -h     --help       Show help and exit

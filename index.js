@@ -8,7 +8,7 @@ var nodeRequire;
 
 if (command.browser) {
   nodeRequire = require;
-  nodeRequire('./lib/browser')(command);
+  nodeRequire('./lib/browser')([require.main.filename], command);
   delete nodeRequire;
 } else if (isNode || isProvaFrame) {
   tape.createStream({ objectMode: true }).pipe(refine).pipe(view);
