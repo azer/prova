@@ -281,7 +281,7 @@ a.minimize, .maximized a.maximize {
 }
 
 .navigation .buttons a {
-  font: normal 12px "pt mono";
+ g font: normal 12px "pt mono";
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   margin-right: 20px;

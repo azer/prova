@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "description": "Test runner based on Tape and Browserify",
   "main": "index.js",
+  "bin": {
+    "prova": "./bin/prova"
+  },
   "scripts": {
     "test": "node test.js"
   },
@@ -35,7 +38,10 @@
     "watchify": "^0.6.2",
     "concat-stream": "^1.4.4",
     "escape-html": "^1.0.1",
-    "mime": "^1.2.11"
+    "mime": "^1.2.11",
+    "run-serially": "0.0.0",
+    "property": "^1.0.0",
+    "flat-glob": "0.0.1"
   },
   "keywords": [
     "testing",

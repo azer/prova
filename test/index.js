@@ -1,4 +1,4 @@
-var test = require("./");
+var test = require("../");
 
 test('assert object', function (assert) {
   assert.plan(4);
