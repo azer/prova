@@ -18,7 +18,7 @@ Features and screenshots:
 ## Install
 
 ```bash
-$ npm install prova
+$ npm install -g prova
 ```
 
 ## Usage
