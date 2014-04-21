@@ -78,3 +78,37 @@ by clicking the `<` button on the right:
 Just like the command-line tool, you can grep some specific tests to run, too:
 
 ![](https://i.cloudup.com/HNCzvv2JT8.png)
+
+## Multiple Tests
+
+Prova comes with a command-line script when you install it globally;
+
+```bash
+$ npm install -g prova
+```
+
+And it allows you running multiple tests on both Node and browser;
+
+```bash
+$ prova test/foo.js test/bar.js
+```
+
+```bash
+$ prova test/**/*.js -b
+```
+
+## Command-line
+
+```
+    USAGE
+
+        prova [filenames] [options]
+
+    OPTIONS
+
+        -b     --browser    Publishes the tests on localhost:7559
+        -g     --grep       Run tests matching with given pattern
+
+        -v     --version    Show version and exit
+        -h     --help       Show help and exit
+```
