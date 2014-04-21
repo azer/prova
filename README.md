@@ -76,10 +76,6 @@ by clicking the `<` button on the right:
 
 ![](https://i.cloudup.com/5n8H9AqMrf.png)
 
-Just like the command-line tool, you can grep some specific tests to run, too:
-
-![](https://i.cloudup.com/HNCzvv2JT8.png)
-
 ## Multiple Tests
 
 Prova comes with a command-line script when you install it globally;
