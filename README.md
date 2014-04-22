@@ -142,7 +142,7 @@ $ rm /Users/azer/.config/browser-launcher/config.json
         -o     --port       Publish the tests on given port number.
         -d     --hostname   Publih the tests on given hostname.
         -l     --launch     List available browsers to launch or launch specified browser.
-        -h     --headless   Launch the browser headlessly.
+        -e     --headless   Launch the browser headlessly. (Requires xvfb)
         -r     --proxy      Launch the browser with specified proxy configuration.
 
         -v     --version    Show version and exit
@@ -189,4 +189,9 @@ $ rm /Users/azer/.config/browser-launcher/config.json
 
           $ node test.js -b -l phantom -g pattern
           $ prova test.js -b -l phantom -g pattern
+
+       8. Launch Chrome headlessly using xvfb:
+
+          $ node test -b -l chrome -e
+          $ prova test -b -l chrome -e
 ```
