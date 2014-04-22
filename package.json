@@ -1,6 +1,6 @@
 {
   "name": "prova",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Test runner based on Tape and Browserify",
   "main": "index.js",
   "bin": {
