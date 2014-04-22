@@ -13,6 +13,7 @@ var options = require("./options");
 
 on(window, 'resize', updatePositions);
 on(window, 'hashchange', run);
+on(window, 'scroll', saveScrollState);
 socket(updateConn);
 
 module.exports = {
@@ -102,6 +103,7 @@ function setup () {
   }
 
   updateFramePosition();
+  recoverScrollPosition();
 }
 
 function setupGrep () {
@@ -232,4 +234,19 @@ function minimize () {
   delete localStorage['frame-maximized'];
   classes.remove(select('body'), 'maximized');
   updateFramePosition();
+}
+
+function saveScrollState () {
+  if (saveScrollState.defer) {
+    clearTimeout(saveScrollState.defer);
+    saveScrollState.defer = undefined;
+  }
+
+  saveScrollState.defer = setTimeout(function () {
+    localStorage['scrollTop'] = document.body.scrollTop;
+  }, 500);
+}
+
+function recoverScrollPosition () {
+  document.body.scrollTop = Number(localStorage['scrollTop']);
 }
