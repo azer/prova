@@ -2,7 +2,7 @@
 
 Node & Browser Test runner based on [Tape](http://github.com/substack/tape) and [Browserify](http://github.com/substack/node-browserify).
 
-Screencasts: [node.gif](https://dl.dropboxusercontent.com/s/8yyepixc0bbtby3/prova-node.gif), [browser.gif](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif), [both.gif](https://i.cloudup.com/4jGix1WEDH.gif)
+Screencasts: [node.gif](https://dl.dropboxusercontent.com/s/8yyepixc0bbtby3/prova-node.gif), [browser.gif](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif), [both.gif](https://i.cloudup.com/4jGix1WEDH.gif), [headless browser](https://i.cloudup.com/lWWplVaKta.png)
 
 Features and screenshots:
 
@@ -13,7 +13,7 @@ Features and screenshots:
 * Browser app runs tests inside of an iframe [Screenshot](https://i.cloudup.com/5n8H9AqMrf.png)
 * Uses [watchify](https://github.com/substack/watchify) to observe file changes and restart browser tests. [GIF Screenshot](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif)
 * Lets filtering test cases (e.g node test.js -g foobar)
-* Comes with [browser-launcher](https://github.com/substack/browser-launcher) for [launching browsers automatically and headless testing](#launching-browsers-and-headless-testing).
+* Comes with [browser-launcher](https://github.com/substack/browser-launcher) for [launching browsers automatically and headless testing](#launching-browsers-and-headless-testing). ([Screenshot](https://i.cloudup.com/lWWplVaKta.png))
 
 ## Install
 
@@ -144,6 +144,7 @@ $ rm /Users/azer/.config/browser-launcher/config.json
         -l     --launch     List available browsers to launch or launch specified browser.
         -e     --headless   Launch the browser headlessly. (Requires xvfb)
         -r     --proxy      Launch the browser with specified proxy configuration.
+        -q     --quit       Shut down the browser server once all the tests are done.
 
         -v     --version    Show version and exit
         -h     --help       Show help and exit
