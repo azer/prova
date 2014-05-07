@@ -76,7 +76,7 @@ by clicking the `<` button on the right:
 
 ![](https://i.cloudup.com/5n8H9AqMrf.png)
 
-## Multiple Tests
+### Multiple Tests
 
 Prova comes with a command-line script when you install it globally;
 
@@ -94,7 +94,7 @@ $ prova test/foo.js test/bar.js
 $ prova test/**/*.js -b
 ```
 
-## Launching Browsers and Headless Testing
+### Launching Browsers and Headless Testing
 
 List the detected browsers;
 
@@ -125,6 +125,14 @@ If you get `no matches for` errors and you think that your system has that brows
 
 ```bash
 $ rm /Users/azer/.config/browser-launcher/config.json
+```
+
+### Browserify Transforms
+
+Prova automatically applies [bunch of transforms](https://github.com/azer/prova/blob/master/lib/browserify-transforms.js#L4) by looking at the file extension. If you'd like to use a transform that doesn't exist in Prova by default, you can choose it with a parameter;
+
+```bash
+$ node test -b -t brfs
 ```
 
 ## Command-line
