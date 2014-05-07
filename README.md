@@ -132,7 +132,13 @@ $ rm /Users/azer/.config/browser-launcher/config.json
 Prova automatically applies [bunch of transforms](https://github.com/azer/prova/blob/master/lib/browserify-transforms.js#L4) by looking at the file extension. If you'd like to use a transform that doesn't exist in Prova by default, you can choose it with a parameter;
 
 ```bash
-$ node test -b -t brfs
+$ node test -b -t coffeeify
+```
+
+Multiple transforms can be specified using comma;
+
+```bash
+$ node test -b -t coffeeify,brfs,foo,bar
 ```
 
 ## Command-line
