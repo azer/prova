@@ -146,6 +146,8 @@ $ rm /Users/azer/.config/browser-launcher/config.json
         -r     --proxy      Launch the browser with specified proxy configuration.
         -q     --quit       Shut down the browser server once all the tests are done.
 
+        -t     --transform  Apply given Browserify transform. e.g node test -b -t coffeeify
+
         -v     --version    Show version and exit
         -h     --help       Show help and exit
 
