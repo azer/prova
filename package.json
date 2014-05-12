@@ -25,14 +25,9 @@
     "default-debug": "0.0.0",
     "resumer": "0.0.0",
     "stream-format": "0.0.3",
-    "dom-children": "0.0.2",
     "glob": "3.2.9",
-    "on-off": "0.0.2",
-    "select-dom": "0.0.0",
-    "style-dom": "0.0.0",
     "dom-classes": "0.0.0",
     "prettify-error": "0.1.x",
-    "bind-key": "0.0.0",
     "faye-websocket": "^0.7.2",
     "pubsub": "^1.0.2",
     "watchify": "^0.7.x",
@@ -42,7 +37,12 @@
     "run-serially": "0.0.0",
     "flat-glob": "0.0.1",
     "user-agent-parser": "^0.6.0",
-    "browser-launcher": "^0.3.4"
+    "browser-launcher": "^0.3.4",
+    "dom-tree": "0.0.1",
+    "dom-style": "0.0.1",
+    "dom-select": "0.0.0",
+    "key-event": "0.0.0",
+    "dom-event": "0.0.0"
   },
   "keywords": [
     "testing",

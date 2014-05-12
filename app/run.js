@@ -1,4 +1,4 @@
-var select = require("select-dom");
+var select = require("dom-select");
 var layout = require("./layout");
 var socket = require("./socket");
 
