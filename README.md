@@ -141,6 +141,20 @@ Multiple transforms can be specified using comma;
 $ node test -b -t coffeeify,brfs,foo,bar
 ```
 
+### Browserify Plugins
+
+Pass Browserify plugins passing `-u` or `--plugin` parameter;
+
+```bash
+$ node test -b --plugin foo
+```
+
+Use comma to separate multiple plugins;
+
+```bash
+$ node test -b --plugin foo,bar
+```
+
 ## Command-line
 
 ```
@@ -150,20 +164,21 @@ $ node test -b -t coffeeify,brfs,foo,bar
 
     OPTIONS
 
-        -g     --grep       Run tests matching with given pattern
+        -g     --grep         Run tests matching with given pattern
 
-        -b     --browser    Publishes the tests on 0.0.0.0:7559
-        -o     --port       Publish the tests on given port number.
-        -d     --hostname   Publih the tests on given hostname.
-        -l     --launch     List available browsers to launch or launch specified browser.
-        -e     --headless   Launch the browser headlessly. (Requires xvfb)
-        -r     --proxy      Launch the browser with specified proxy configuration.
-        -q     --quit       Shut down the browser server once all the tests are done.
+        -b     --browser      Publishes the tests on 0.0.0.0:7559
+        -o     --port         Publish the tests on given port number.
+        -d     --hostname     Publih the tests on given hostname.
+        -l     --launch       List available browsers to launch or launch specified browser.
+        -e     --headless     Launch the browser headlessly. (Requires xvfb)
+        -r     --proxy        Launch the browser with specified proxy configuration.
+        -q     --quit         Shut down the browser server once all the tests are done.
 
-        -t     --transform  Apply given Browserify transform. e.g node test -b -t coffeeify
+        -t     --transform    Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
+        -u     --plugin       Use given Browserify plugins. e.g node test -b -u foo,bar
 
-        -v     --version    Show version and exit
-        -h     --help       Show help and exit
+        -v     --version      Show version and exit
+        -h     --help         Show help and exit
 
     EXAMPLES
 
