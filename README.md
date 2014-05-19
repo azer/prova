@@ -179,7 +179,12 @@ $ node test -b --plugin foo,bar
 
         -v     --version      Show version and exit
         -h     --help         Show help and exit
+        -x     --examples     Show example commands and exit
+```
 
+## Example Commands
+
+```
     EXAMPLES
 
         1. Run the tests on NodeJS.
