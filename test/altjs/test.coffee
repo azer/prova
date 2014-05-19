@@ -1,4 +1,4 @@
-test = require './'
+test = require '../../'
 
 test 'assert object', (t)->
   t.plan 4
