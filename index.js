@@ -17,6 +17,13 @@ if (command.launch === true) {
   return;
 }
 
+if (command.examples) {
+  nodeRequire = require;
+  nodeRequire('./lib/cli').examples();
+  module.exports = empty;
+  return;
+}
+
 if (command.browser) {
   nodeRequire = require;
   nodeRequire('./lib/cli').launch();
