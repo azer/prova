@@ -155,6 +155,17 @@ Use comma to separate multiple plugins;
 $ node test -b --plugin foo,bar
 ```
 
+### Custom Frame Documents
+
+When you're running the tests on the browser, Prova has an empty HTML template that loads and runs the JavaScript tests.
+You can customize this HTML file with -f or --frame parameter:
+
+```js
+$ node test -b -f test.html
+```
+
+Click the arrow button on right middle to keep the frame open. You'll be seeing the HTML document and test results in the same screen.
+
 ## Command-line
 
 ```
@@ -173,6 +184,7 @@ $ node test -b --plugin foo,bar
         -e     --headless     Launch the browser headlessly. (Requires xvfb)
         -r     --proxy        Launch the browser with specified proxy configuration.
         -q     --quit         Shut down the browser server once all the tests are done.
+        -f     --frame        Specify a custom document to run tests on browser. e.g node test -b -f custom.html
 
         -t     --transform    Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
         -u     --plugin       Use given Browserify plugins. e.g node test -b -u foo,bar
