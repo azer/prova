@@ -4,9 +4,9 @@ var socket = require("./socket");
 
 module.exports = start;
 
-function start () {
+function start (url) {
   window.addEventListener("message", receiveMessage, false);
-  layout.run();
+  layout.run(url);
 }
 
 function receiveMessage (message) {

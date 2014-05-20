@@ -1,36 +1,34 @@
 var tape = require('tape');
 var isNode = require("is-node");
-var view = require('./lib/view');
 var refine = require("./lib/refine");
 var command = require('./lib/command');
-var isProvaFrame = !isNode && document && document.getElementById && document.getElementById('prova-frame');
-var nodeRequire;
-
+var isProvaFrame = !isNode && document;
+var nodeRequire = require;
+var view;
 
 empty.skip = empty;
 empty.only = empty;
 
 if (command.launch === true) {
-  nodeRequire = require;
   nodeRequire('./lib/cli').launch();
   module.exports = empty;
   return;
 }
 
 if (command.examples) {
-  nodeRequire = require;
   nodeRequire('./lib/cli').examples();
   module.exports = empty;
   return;
 }
 
 if (command.browser) {
-  nodeRequire = require;
   nodeRequire('./lib/cli').launch();
   nodeRequire('./lib/browser')([require.main.filename], command);
   delete nodeRequire;
 } else if (isNode || isProvaFrame) {
-  tape.createStream({ objectMode: true }).pipe(refine).pipe(view);
+  view = isNode ? nodeRequire('./lib/node-reporter') : require('./lib/browser-reporter');
+  tape.createStream({ objectMode: true }).pipe(refine).pipe(view());
+  delete nodeRequire;
 }
 
 module.exports = prova;

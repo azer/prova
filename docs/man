@@ -13,6 +13,7 @@
         -e     --headless     Launch the browser headlessly. (Requires xvfb)
         -r     --proxy        Launch the browser with specified proxy configuration.
         -q     --quit         Shut down the browser server once all the tests are done.
+        -f     --frame        Specify a custom document to run tests on browser. e.g node test -b -f custom.html
 
         -t     --transform    Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
         -u     --plugin       Use given Browserify plugins. e.g node test -b -u foo,bar

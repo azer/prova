@@ -10,6 +10,7 @@ var socket = require("./socket");
 var grep = require("./grep");
 var templates = require("./templates");
 var options = require("./options");
+var url;
 
 on(window, 'resize', updatePositions);
 on(window, 'hashchange', run);
@@ -118,10 +119,14 @@ function setupGrep () {
   });
 }
 
-function run () {
+function run (_url) {
+  _url && (url = _url);
+
   addError.last = undefined;
   status('running');
+
   dom.add(document.body, templates['frame'], {
+    url: url,
     options: options.stringify()
   });
 }
