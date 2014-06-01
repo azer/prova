@@ -185,13 +185,14 @@ Click the arrow button on right middle to keep the frame open. You'll be seeing 
         -r     --proxy        Launch the browser with specified proxy configuration.
         -q     --quit         Shut down the browser server once all the tests are done.
         -f     --frame        Specify a custom document to run tests on browser. e.g node test -b -f custom.html
+        -x     --exec         Execute given commmand before running the tests.
 
         -t     --transform    Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
         -u     --plugin       Use given Browserify plugins. e.g node test -b -u foo,bar
 
         -v     --version      Show version and exit
         -h     --help         Show help and exit
-        -x     --examples     Show example commands and exit
+               --examples     Show example commands and exit
 ```
 
 ## Example Commands
