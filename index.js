@@ -24,11 +24,9 @@ if (command.examples) {
 if (command.browser) {
   nodeRequire('./lib/cli').launch();
   nodeRequire('./lib/browser')([require.main.filename], command);
-  delete nodeRequire;
 } else if (isNode || isProvaFrame) {
   view = isNode ? nodeRequire('./lib/node-reporter') : require('./lib/browser-reporter');
   tape.createStream({ objectMode: true }).pipe(refine).pipe(view());
-  delete nodeRequire;
 }
 
 module.exports = prova;
