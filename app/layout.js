@@ -120,7 +120,9 @@ function setupGrep () {
 }
 
 function run (_url) {
-  _url && (url = _url);
+  if (typeof _url == 'string') {
+    url = _url;
+  }
 
   addError.last = undefined;
   status('running');
