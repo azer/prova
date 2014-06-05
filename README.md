@@ -166,6 +166,14 @@ $ node test -b -f test.html
 
 Click the arrow button on right middle to keep the frame open. You'll be seeing the HTML document and test results in the same screen.
 
+### Manually Restarting Browser Tests
+
+Prova watches for changes and automatically restarts the browser tests (inside in an iframe) but in case you need, there is an endpoint for restarting all the tests by hitting an endpoint;
+
+```
+$ curl localhost:7559/restart
+```
+
 ## Command-line
 
 ```
