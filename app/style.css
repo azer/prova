@@ -172,14 +172,23 @@ html, body {
   padding-right: 3px;
 }
 
+.errors .stack {
+  font: normal 12px "pt mono";
+}
+
 .errors .stack-title {
-  color: rgb(34, 34, 34);
-  font-weight: bold;
+  color: rgb(64, 44, 44);
+  padding: 10px 0 5px;
 }
 
 .errors .stack-line {
   padding: 1px 20px;
-  color: rgb(34, 34, 34);
+  color: rgb(64, 44, 44);
+}
+
+.errors .stack-line:hover {
+  cursor: pointer;
+  color: #fff;
 }
 
 .results ul, .results h3 {

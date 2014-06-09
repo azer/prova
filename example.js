@@ -7,7 +7,7 @@ test('just passing', function (assert) {
 
 test('a test with failing assertions', function (assert) {
   assert.plan(2);
-  assert.equal(true, false);
+  assert.equal('<h1>hello</h1>', '<h2>hello</h2>');
   assert.equal({ a: 1, b: 3 }, { a: 1 });
 });
 

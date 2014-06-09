@@ -42,7 +42,8 @@
     "dom-style": "0.0.1",
     "dom-select": "0.0.0",
     "key-event": "0.0.0",
-    "dom-event": "0.0.0"
+    "dom-event": "0.0.0",
+    "component-delegate": "^0.2.2"
   },
   "keywords": [
     "testing",

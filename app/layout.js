@@ -1,11 +1,14 @@
 var dom = require("dom-tree");
 var on = require("dom-event");
+on.child = require("component-delegate");
+
 var select = require("dom-select");
 var style = require("dom-style");
 var classes = require("dom-classes");
 var format = require("format-text");
 var bindKey = require("key-event");
 var escape = require("escape-html");
+var failingCode = require("failing-code");
 var socket = require("./socket");
 var grep = require("./grep");
 var templates = require("./templates");
@@ -28,6 +31,9 @@ module.exports = {
 
 function addError (error) {
   var top = select('.top');
+  var view = {
+    name: error.name
+  };
 
   if (!top) {
     setup();
@@ -35,29 +41,33 @@ function addError (error) {
   };
 
   classes.add(select('.top'), 'failed');
-  error.stack = format(templates.stack, error.stack.replace(/\n\s+/g, templates['stack-line']));
+  view.stack = format(templates.stack, error.stack.replace(/\n\s+/g, templates['stack-line']));
 
-  error.code = error.source.length ? format(templates.code, {
-    'first-line-num': error.source[0].line,
-    'first-line-source': escape(error.source[0].code),
-    'second-line-num': error.source[1].line,
-    'second-line-source': escape(error.source[1].code),
-    'third-line-num': error.source[2].line,
-    'third-line-source': escape(error.source[2].code)
-  }) : '';
+  view.code = error.source.length ? formatCode(error.source) : '';
 
   if (error.expected != undefined) {
-    error.diff = format(templates.diff, JSON.stringify(error.expected, null, " "), JSON.stringify(error.actual, null, " "));
+    view.diff = format(templates.diff, escape(JSON.stringify(error.expected, null, " ")), escape(JSON.stringify(error.actual, null, " "))) || " ";
   }
 
   if (addError.last != error.test) {
-    error.title = '<h3>' + error.test +'</h3>';
+    view.title = '<h3>' + error.test +'</h3>';
     addError.last = error.test;
   } else {
-    error.title = '';
+    view.title = '';
   }
 
-  dom.add(select('.results .errors'), templates.error, error);
+  if (!addError.counter) {
+    addError.counter = 1;
+  }
+
+  view.id = addError.counter++;
+
+  dom.add(select('.results .errors'), templates.error, view);
+  var el = select('#error-' + view.id);
+  on.child.bind(el, '.stack-line', 'click', function (e) {
+    var index = Array.prototype.indexOf.call(e.target.parentElement.children, e.target) - 1;
+    select('.code', el).innerHTML = formatCode(failingCode(error, __source_code, index));
+  });
 }
 
 function markTest (test) {
@@ -256,4 +266,15 @@ function saveScrollState () {
 
 function recoverScrollPosition () {
   document.body.scrollTop = Number(localStorage['scrollTop']);
+}
+
+function formatCode (source) {
+  return format(templates.code, {
+    'first-line-num': source[0].line,
+    'first-line-source': escape(source[0].code),
+    'second-line-num': source[1].line,
+    'second-line-source': escape(source[1].code),
+    'third-line-num': source[2].line,
+    'third-line-source': escape(source[2].code)
+  })
 }
