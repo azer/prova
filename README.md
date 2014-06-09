@@ -14,6 +14,7 @@ Features and screenshots:
 * Uses [watchify](https://github.com/substack/watchify) to observe file changes and restart browser tests. [GIF Screenshot](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif)
 * Lets filtering test cases (e.g node test.js -g foobar)
 * Comes with [browser-launcher](https://github.com/substack/browser-launcher) for [launching browsers automatically and headless testing](#launching-browsers-and-headless-testing). ([Screenshot](https://i.cloudup.com/lWWplVaKta.png))
+* Clickable error stacks on the browser: [Screenshot](https://i.cloudup.com/42iYw0WnPP.gif)
 
 ## Install
 
