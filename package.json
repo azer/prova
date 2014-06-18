@@ -1,6 +1,6 @@
 {
   "name": "prova",
-  "version": "1.11.1",
+  "version": "1.12.0",
   "description": "Test runner based on Tape and Browserify",
   "main": "index.js",
   "bin": {
@@ -43,7 +43,8 @@
     "dom-select": "0.0.0",
     "key-event": "0.0.0",
     "dom-event": "0.0.0",
-    "component-delegate": "^0.2.2"
+    "component-delegate": "^0.2.2",
+    "single-line-log": "^0.4.1"
   },
   "keywords": [
     "testing",
