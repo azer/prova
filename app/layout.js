@@ -47,6 +47,10 @@ function addError (error) {
 
   if (error.expected != undefined) {
     view.diff = format(templates.diff, escape(JSON.stringify(error.expected, null, " ")), escape(JSON.stringify(error.actual, null, " "))) || " ";
+    view['diff-class'] = '';
+  } else {
+    view.diff = "";
+    view['diff-class'] = ' empty';
   }
 
   if (addError.last != error.test) {

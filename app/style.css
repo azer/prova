@@ -141,6 +141,10 @@ html, body {
   padding-top: 5px;
 }
 
+.errors .diff.empty {
+  display: none;
+}
+
 .errors .diff strong {
   padding-right: 5px;
   color: #ccc;
