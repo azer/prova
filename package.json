@@ -53,7 +53,7 @@
     "tape"
   ],
   "repository": {
-    "url": "git@github.com:azer/prova.git",
+    "url": "https://github.com/azer/prova.git",
     "type": "git"
   },
   "author": "azer",
