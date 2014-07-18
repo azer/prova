@@ -200,6 +200,10 @@ $ curl localhost:7559/restart
         -t     --transform    Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
         -u     --plugin       Use given Browserify plugins. e.g node test -b -u foo,bar
 
+        -s     --progress     Show a progress bar. Useful when tests are running slow.
+
+        -p     --tap          Output original Tap output without modifying anything.
+
         -v     --version      Show version and exit
         -h     --help         Show help and exit
                --examples     Show example commands and exit
