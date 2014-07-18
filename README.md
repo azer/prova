@@ -4,6 +4,8 @@ Node & Browser Test runner based on [Tape](http://github.com/substack/tape) and 
 
 Screencasts: [node.gif](https://dl.dropboxusercontent.com/s/8yyepixc0bbtby3/prova-node.gif), [browser.gif](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif), [both.gif](https://i.cloudup.com/4jGix1WEDH.gif), [headless browser](https://i.cloudup.com/lWWplVaKta.png)
 
+Slides: [slides.com/azer/prova](http://slides.com/azer/prova)
+
 Features and screenshots:
 
 * Embeds [Tape](http://github.com/substack/tape)
