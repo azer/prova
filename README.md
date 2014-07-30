@@ -9,7 +9,7 @@ Slides: [slides.com/azer/prova](http://slides.com/azer/prova)
 Features and screenshots:
 
 * Embeds [Tape](http://github.com/substack/tape)
-* Comes with a builtin web app to run tests on browser.
+* Comes with a builtin web app to run tests on browser, sourcemaps are enabled.
 * Outputs less when tests pass ([Node](https://i.cloudup.com/ausJApnH1v.png), [Browser](https://i.cloudup.com/OKebjyRMfU.png))
 * Outputs more when tests fail ([Node](https://i.cloudup.com/R8KQ8Qwspz.png), [Browser](https://i.cloudup.com/nA08e0s60b.png))
 * Browser app runs tests inside of an iframe [Screenshot](https://i.cloudup.com/5n8H9AqMrf.png)
