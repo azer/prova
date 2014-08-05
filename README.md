@@ -178,6 +178,16 @@ Prova watches for changes and automatically restarts the browser tests (inside i
 $ curl localhost:7559/restart
 ```
 
+### Loading Assets
+
+You may need to load your images, web workers etc. for testing. Prova allows you to load assets from your current directory via the `/assets/in` endpoint. Let's say you'd like to load a file called "foobar.png":
+
+```
+$ curl http://localhost:7559/assets/in/foobar.png
+```
+
+Should work for you.
+
 ## Command-line
 
 ```
