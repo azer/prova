@@ -6,6 +6,11 @@ module.exports = start;
 
 function start (url) {
   window.addEventListener("message", receiveMessage, false);
+  
+  // clear the console on each run so that previous messages don't show
+  if (console.clear) {
+    console.clear();
+  }
   layout.run(url);
 }
 
