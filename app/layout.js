@@ -41,7 +41,7 @@ function addError (error) {
   };
 
   classes.add(select('.top'), 'failed');
-  view.stack = format(templates.stack, error.stack.replace(/\n\s+/g, templates['stack-line']));
+  view.stack = format(templates.stack, escape(error.stack).replace(/\n\s+/g, templates['stack-line']));
 
   view.code = error.source.length ? formatCode(error.source) : '';
 

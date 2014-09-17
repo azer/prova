@@ -1,6 +1,6 @@
 {
   "name": "prova",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "description": "Test runner based on Tape and Browserify",
   "main": "index.js",
   "bin": {
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "new-command": "0.0.3",
-    "tape": "2.x",
     "through": "~2.3.4",
     "is-node": "0.0.0",
     "failing-code": "0.1.x",
@@ -44,7 +43,8 @@
     "key-event": "0.0.0",
     "dom-event": "0.0.0",
     "component-delegate": "^0.2.2",
-    "single-line-log": "^0.4.1"
+    "single-line-log": "^0.4.1",
+    "tape": "^3.0.0"
   },
   "keywords": [
     "testing",
