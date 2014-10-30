@@ -7,7 +7,7 @@
     "prova": "./bin/prova"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "prova test/*"
   },
   "dependencies": {
     "new-command": "0.0.3",
