@@ -7,7 +7,7 @@
     "prova": "./bin/prova"
   },
   "scripts": {
-    "test": "prova test/*"
+    "test": "prova test/{index,multiple}.js"
   },
   "dependencies": {
     "browser-launcher": "^1.0.0",
