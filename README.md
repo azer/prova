@@ -17,7 +17,7 @@ Features and screenshots:
 * Lets filtering test cases (e.g node test.js -g foobar)
 * Comes with [browser-launcher](https://github.com/substack/browser-launcher) for [launching browsers automatically and headless testing](#launching-browsers-and-headless-testing). ([Screenshot](https://i.cloudup.com/lWWplVaKta.png))
 * Clickable error stacks on the browser: [Screenshot](https://i.cloudup.com/42iYw0WnPP.gif)
-* Optional progress bar for slow tests: [Screenshot](https://i.cloudup.com/PJR44iZStH.gif)
+* Optional progress bar for slow tests. GIFs: [Node](https://i.cloudup.com/PJR44iZStH.gif) / [Browser](https://cldup.com/n5miJIEN2G.gif)
 
 ## Install
 
