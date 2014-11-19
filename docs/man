@@ -24,7 +24,7 @@
 
         -p     --tap           Output original Tap output without modifying anything.
 
-        -C     --no-console    Disable showing browser console messages from browsers, on the console.
+        -C     --no-console    Disable showing browser console messages on command-line.
 
         -v     --version       Show version and exit
         -h     --help          Show help and exit
