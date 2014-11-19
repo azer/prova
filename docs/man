@@ -8,7 +8,7 @@
 
         -b     --browser       Publishes the tests on 0.0.0.0:7559
         -o     --port          Publish the tests on given port number.
-        -d     --hostname      Publih the tests on given hostname.
+        -d     --hostname      Publish the tests on given hostname.
         -l     --launch        List available browsers to launch or launch specified browser.
         -e     --headless      Launch the browser headlessly. (Requires xvfb)
         -r     --proxy         Launch the browser with specified proxy configuration.
@@ -23,6 +23,8 @@
         -s     --progress      Show a progress bar. Useful when tests are running slow.
 
         -p     --tap           Output original Tap output without modifying anything.
+
+        -C     --no-console    Disable showing browser console messages from browsers, on the console.
 
         -v     --version       Show version and exit
         -h     --help          Show help and exit

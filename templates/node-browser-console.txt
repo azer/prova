@@ -1,0 +1,1 @@
+  {reset}{grey}console:{method} > {white}{message}{reset}
