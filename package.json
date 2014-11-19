@@ -1,6 +1,6 @@
 {
   "name": "prova",
-  "version": "1.16.2",
+  "version": "2.0.0",
   "description": "Test runner based on Tape and Browserify",
   "main": "index.js",
   "bin": {
@@ -35,6 +35,7 @@
     "new-command": "^1.0.2",
     "prettify-error": "0.1.x",
     "pubsub": "^1.0.2",
+    "request": "^2.48.0",
     "resumer": "0.0.0",
     "route-map": "^0.1.0",
     "run-serially": "0.0.0",

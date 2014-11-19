@@ -6,23 +6,24 @@
 
         -g     --grep         Run tests matching with given pattern
 
-        -b     --browser      Publishes the tests on 0.0.0.0:7559
-        -o     --port         Publish the tests on given port number.
-        -d     --hostname     Publih the tests on given hostname.
-        -l     --launch       List available browsers to launch or launch specified browser.
-        -e     --headless     Launch the browser headlessly. (Requires xvfb)
-        -r     --proxy        Launch the browser with specified proxy configuration.
-        -q     --quit         Shut down the browser server once all the tests are done.
-        -f     --frame        Specify a custom document to run tests on browser. e.g node test -b -f custom.html
-        -x     --exec         Execute given commmand before running the tests.
+        -b     --browser       Publishes the tests on 0.0.0.0:7559
+        -o     --port          Publish the tests on given port number.
+        -d     --hostname      Publih the tests on given hostname.
+        -l     --launch        List available browsers to launch or launch specified browser.
+        -e     --headless      Launch the browser headlessly. (Requires xvfb)
+        -r     --proxy         Launch the browser with specified proxy configuration.
+        -q     --quit          Shut down the browser server once all the tests are done.
+        -f     --frame         Specify a custom document to run tests on browser. e.g node test -b -f custom.html
+        -x     --exec          Execute given commmand before running the tests.
+        -y     --http-proxy    Proxy requests matching with given pattern to a target. e.g -y "/images=localhost:8080"
 
-        -t     --transform    Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
-        -u     --plugin       Use given Browserify plugins. e.g node test -b -u foo,bar
+        -t     --transform     Use given Browserify transforms. e.g node test -b -t coffeeify,brfs
+        -u     --plugin        Use given Browserify plugins. e.g node test -b -u foo,bar
 
-        -s     --progress     Show a progress bar. Useful when tests are running slow.
+        -s     --progress      Show a progress bar. Useful when tests are running slow.
 
-        -p     --tap          Output original Tap output without modifying anything.
+        -p     --tap           Output original Tap output without modifying anything.
 
-        -v     --version      Show version and exit
-        -h     --help         Show help and exit
-               --examples     Show example commands
+        -v     --version       Show version and exit
+        -h     --help          Show help and exit
+               --examples      Show example commands
