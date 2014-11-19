@@ -21,12 +21,20 @@ function receiveMessage (message) {
   }
 
   if (message.data.type == 'test') {
-    layout.markTest(message.data);
+    test(message.data);
   }
 
   if (message.data.type == 'end') {
     end(message.data);
   }
+}
+
+function test (msg) {
+  layout.markTest(msg);
+  socket.send({
+    test: msg.name,
+    userAgent: navigator.userAgent
+  });
 }
 
 function fail (error) {
