@@ -39,6 +39,7 @@
     "resumer": "0.0.0",
     "route-map": "^0.1.0",
     "run-serially": "0.0.0",
+    "set-content-type": "0.0.3",
     "single-line-log": "^0.4.1",
     "stream-format": "0.0.3",
     "style-format": "0.0.0",
