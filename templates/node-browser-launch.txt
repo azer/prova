@@ -1,0 +1,1 @@
+{reset}  {grey}Launching {reset}{bold}{app} {grey}to run the tests{extras}

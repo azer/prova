@@ -1,0 +1,2 @@
+{reset}
+  {cyan}Visit {reset}{bold}http://{host}:{port}{params}{grey} to run the tests
