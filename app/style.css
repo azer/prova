@@ -342,7 +342,8 @@ a.minimize, .maximized a.maximize {
   outline: 0;
   width: 100%;
   background: #fff;
-  font: 12px Helvetica, Arial, sans-serif;
+  font: normal 12px "pt mono";
+  text-transform: uppercase;
   letter-spacing: 1px;
   color: #333;
 }
@@ -367,7 +368,11 @@ a.minimize, .maximized a.maximize {
   letter-spacing: 1px;
 }
 
-.grep * {
+.grep label span {
+  font: normal 12px "pt mono";
+}
+
+.grep label {
   display: table-cell;
 }
 
