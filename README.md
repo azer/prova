@@ -193,7 +193,7 @@ Should work for you.
 HTTP proxying is pretty useful to by-pass cross-domain issues (CORS) on the browser. You can easily point a URL to another host using `-y` / `--http-proxy` parameters:
 
 ```
-$ node test -b -y "/my-api=localhost:8080"
+$ node test -b -y "/my-api=http://localhost:8080"
 ```
 
 Assuming that you'll be running your tests on `:7559`, any requests to `/my-api` will be streamed through `localhost:8080` in the above example.
