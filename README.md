@@ -257,7 +257,7 @@ Assuming that you'll be running your tests on `:7559`, any requests to `/my-api`
        3. Publish the tests on given host and port.
 
           $ node test.js -o 8080 -d foobar.net
-          $ prova test.js -p 8080 -d foobar.net
+          $ prova test.js -o 8080 -d foobar.net
 
        4. Publish the tests and launch a browser to automatically run the tests.
 
