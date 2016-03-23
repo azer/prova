@@ -1,5 +1,7 @@
 ## prova
 
+P.S: [I've removed all my stuff from NPM.](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)
+
 Node & Browser Test runner based on [Tape](http://github.com/substack/tape) and [Browserify](http://github.com/substack/node-browserify).
 
 Screencasts: [node.gif](https://dl.dropboxusercontent.com/s/8yyepixc0bbtby3/prova-node.gif), [browser.gif](https://dl.dropboxusercontent.com/s/wtzt78riv7vcp7n/prova.gif), [both.gif](https://i.cloudup.com/4jGix1WEDH.gif), [headless browser](https://i.cloudup.com/lWWplVaKta.png)
@@ -22,7 +24,7 @@ Features and screenshots:
 ## Install
 
 ```bash
-$ npm install -g prova
+$ npm install -g azer/prova
 ```
 
 ## Usage
