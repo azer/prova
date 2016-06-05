@@ -27,7 +27,7 @@
     "flat-glob": "0.0.1",
     "format-text": "azer/format-text",
     "glob": "^4.0.6",
-    "is-node": "azer/is-node,
+    "is-node": "azer/is-node",
     "key-event": "0.0.0",
     "left-pad": "0.0.3",
     "local-debug": "0.0.0",
