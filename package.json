@@ -34,7 +34,7 @@
     "mime": "^1.2.11",
     "new-command": "azer/new-command",
     "prettify-error": "azer/prettify-error",
-    "pubsub": "^1.0.2",
+    "pubsub": "azer/pubsub",
     "request": "^2.48.0",
     "resumer": "0.0.0",
     "route-map": "^0.1.0",
